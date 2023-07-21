@@ -7,4 +7,9 @@ set(CMAKE_CXX_STANDARD_REQUIRED TRUE)
 
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/cmake")
 
-include(FetchGtest)
+add_subdirectory(img-in)
+
+if(CMAKE_BUILD_TYPE MATCHES "Debug")
+    include(FetchGtest)
+    add_subdirectory(tests)
+endif()
