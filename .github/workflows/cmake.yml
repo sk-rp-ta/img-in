@@ -11,7 +11,7 @@ env:
   BUILD_DEBUG: Debug
 
 jobs:
-  build release:
+  build-release:
     runs-on: ubuntu-latest
 
     steps:
@@ -23,7 +23,7 @@ jobs:
     - name: Build
       run: cmake --build ${{github.workspace}}/build --config ${{env.BUILD_RELEASE}}
 
-  build debug:
+  build-debug:
     runs-on: ubuntu-latest
 
     steps:
