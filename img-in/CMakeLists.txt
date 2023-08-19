@@ -1,5 +1,7 @@
-include_directories(inc)
+add_subdirectory(detail)
 
-file(GLOB sources src/*.cpp)
-add_library(${PROJECT_NAME} ${sources})
-target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/inc)
+add_library(Image OBJECT Image.cpp)
+
+add_library(${PROJECT_NAME} STATIC Image.cpp)
+target_link_libraries(${PROJECT_NAME} PRIVATE detail)
+#target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/inc)
