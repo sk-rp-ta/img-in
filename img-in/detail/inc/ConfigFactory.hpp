@@ -10,7 +10,7 @@ namespace imgin::detail
 class ConfigFactory : public interface::IConfigFactory
 {
 public:
-    std::unique_ptr<interface::IFilesystem> createFilesystem();
+    std::unique_ptr<interface::IFilesystem> createFilesystem() override;
 };
 
 } // namespace imgin::detail

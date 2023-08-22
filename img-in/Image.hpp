@@ -16,8 +16,8 @@ public:
     using Config = std::unique_ptr<interface::IConfigFactory>;
 
     Image() = default;
-    Image(const std::filesystem::path, Config);
-    void load(const std::filesystem::path, Config);
+    Image(const std::filesystem::path&, Config);
+    void load(const std::filesystem::path&, Config);
 private:
     std::unique_ptr<interface::IFilesystem> filesystem;
     std::unique_ptr<interface::IImage> image;

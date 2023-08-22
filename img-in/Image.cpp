@@ -8,19 +8,19 @@
 namespace imgin
 {
 
-void Image::load(const std::filesystem::path image, Config factory = std::make_unique<detail::ConfigFactory>())
+void Image::load(const std::filesystem::path& imagePath, Config factory = std::make_unique<detail::ConfigFactory>())
 {
     filesystem = factory->createFilesystem();
 
-    if (not filesystem->exists(image))
+    if (not filesystem->exists(imagePath))
     {
-        throw std::runtime_error("File does not exist");
+        throw std::runtime_error("File " + imagePath.string() + " does not exist");
     }
 };
 
-Image::Image(const std::filesystem::path image, Config factory = std::make_unique<detail::ConfigFactory>())
+Image::Image(const std::filesystem::path& imagePath, Config factory = std::make_unique<detail::ConfigFactory>())
 {
-    load(image, std::move(factory));
+    load(imagePath, std::move(factory));
 };
 
 }

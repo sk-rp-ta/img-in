@@ -1,5 +1,5 @@
-#include "../inc/ConfigFactory.hpp"
-#include "../inc/FilesystemWrapper.hpp"
+#include "inc/ConfigFactory.hpp"
+#include "inc/FilesystemWrapper.hpp"
 
 namespace imgin::detail
 {

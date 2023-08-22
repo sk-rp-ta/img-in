@@ -7,5 +7,5 @@
 class ConfigFactoryMock : public imgin::interface::IConfigFactory
 {
 public:
-    MOCK_METHOD0(createFilesystem, std::unique_ptr<imgin::interface::IFilesystem>());
+    MOCK_METHOD(std::unique_ptr<imgin::interface::IFilesystem>, createFilesystem, (), (override));
 };

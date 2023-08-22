@@ -7,5 +7,5 @@
 class FilesystemMock : public imgin::interface::IFilesystem
 {
 public:
-    MOCK_METHOD1(exists, bool(const std::filesystem::path));
+    MOCK_METHOD(bool, exists, (const std::filesystem::path&), (override));
 };

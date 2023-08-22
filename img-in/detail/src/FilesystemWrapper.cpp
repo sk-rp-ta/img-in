@@ -1,9 +1,9 @@
-#include "../inc/FilesystemWrapper.hpp"
+#include "inc/FilesystemWrapper.hpp"
 
 namespace imgin::detail
 {
 
-bool FilesystemWrapper::exists(const std::filesystem::path path)
+bool FilesystemWrapper::exists(const std::filesystem::path& path)
 {
     return std::filesystem::exists(path);
 };
