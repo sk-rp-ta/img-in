@@ -6,6 +6,7 @@ function(add_ut UT_NAME FILE LIBRARIES)
     target_link_libraries(${UT_NAME}
         PRIVATE
         GTest::gtest_main
+        GTest::gmock_main
         ${LIBRARIES})
 
     gtest_discover_tests(${UT_NAME})
